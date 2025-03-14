@@ -1,0 +1,4 @@
+- [ ] hide scrollbar in skins view
+- [ ] filter by weapon type in skins view
+- [ ] typescript support
+- [ ]
