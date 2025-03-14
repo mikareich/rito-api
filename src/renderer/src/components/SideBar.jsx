@@ -1,4 +1,4 @@
-import { GoLock, GoPencil, GoSignOut, GoGear } from 'react-icons/go';
+import { GoPencil, GoSignOut, GoGear } from 'react-icons/go';
 import { BsDiscord } from 'react-icons/bs';
 import { GiCurvyKnife } from 'react-icons/gi';
 import { Link } from 'react-router-dom';

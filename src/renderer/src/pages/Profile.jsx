@@ -1,9 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
-import { useMemo, useState } from 'react';
+import { useContext, useMemo, useState } from 'react';
 import Swal from 'sweetalert2';
+import { UserContext } from '../components/UserProvider';
 
 export default function Profile() {
-  const [currentTier, setCurrentTier] = useState(16);
+  const [user] = useContext(UserContext);
+  const [currentTier, setCurrentTier] = useState(user?.tier || 4);
 
   const allRanks = useQuery({
     queryKey: ['ranks'],
@@ -38,7 +40,10 @@ export default function Profile() {
     setCurrentTier(newTier);
   };
 
-  const saveRank = () => {
+  const saveRank = async () => {
+    console.log('lol', currentTier, user);
+    await window.api.updateTier(currentTier, user);
+
     Swal.fire({
       icon: 'success',
       text: 'Rank Updated',
