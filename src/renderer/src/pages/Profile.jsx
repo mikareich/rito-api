@@ -41,7 +41,6 @@ export default function Profile() {
   };
 
   const saveRank = async () => {
-    console.log('lol', currentTier, user);
     await window.api.updateTier(currentTier, user);
 
     Swal.fire({

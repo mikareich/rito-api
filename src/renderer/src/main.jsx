@@ -1,3 +1,5 @@
+/** author: github.com/mikareich. feel free to message me for help/info :) */
+
 import './styles.css';
 
 import React, { useMemo } from 'react';
